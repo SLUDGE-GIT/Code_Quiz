@@ -52,7 +52,7 @@ let score = 0;
 let quizIndex = 0;
 
 //need timer
-let time =  document.querySelector('#time');
+let time = document.querySelector('#time');
 //timer countdown start
 let timerStart = document.querySelector('#startQuiz');
 
@@ -100,17 +100,18 @@ function show(quizIndex){
     newUl.innerHTML = '';
 
 //looping through quiz questions array
-for (let i = 0; i < quizQuestions.length; i++){
-let userQ = quizQuestions[quizIndex].prompt;
-let userChoice = quizQuestions[quizIndex].choices;
+for (let i = 0; i < quizQuestions.length; i++) {
+    let  userQ = quizQuestions[quizIndex].prompt;
+    var userSelection = quizQuestions[quizIndex].choices;    // this literally has me so perplexed - it wont let me use "let" to define the variable, only, "var" this was my main problem
 quizContainer.textContent = userQ;
 
 }
 
-userChoice.forEach(function (newItem) {
+    userSelection.forEach(function (newItem) {
+
     let newListItem = document.createElement('li');
 
-    newListItem.textContent = newListItem;
+    newListItem.textContent = newItem;
     quizContainer.appendChild(newUl);
     newUl.appendChild(newListItem);
     newListItem.addEventListener('click', (compare));
@@ -176,7 +177,7 @@ if (remainingTime >= 0){
 let playerScoreFromTime = remainingTime;
 let newP2 = document.createElement('p');
 clearInterval(ph);
-newP.textContent = 'Your socre is: ' + playerScoreFromTime;
+newP.textContent = 'Your score is: ' + playerScoreFromTime;
 quizContainer.appendChild(newP2);
 }
 

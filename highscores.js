@@ -1,5 +1,5 @@
 let highScoreList = document.querySelector('#highScoreList')
-let clearHighScore = document.querySelector('#clearHighScore')
+let clear = document.querySelector('#clear')
 let previousPage = document.querySelector('#previousPage')
 
 // should  pull from local storage so if they come back to the website later - the high score list will still be populated (if they dont hit clear)
@@ -22,7 +22,7 @@ if (allHighScores !== null){
 }
 
 //should clear score and reload current document
-reset.addEventListener('click', function(){
+clear.addEventListener('click', function(){
 localStorage.clear();
 location.reload();
 });

@@ -28,6 +28,7 @@
         float: right;
     }
 
+    /* highscores.html */
     #previousPage {
         background-color: royalblue;
         position: relative;
@@ -40,8 +41,8 @@
         text-align: center;
         text-decoration: none;
     }
-
-    #clearHighscore {
+    /* highscores.html */
+    #clear {
         background-color: royalblue;
         position: relative;
         padding: 10px;
@@ -97,4 +98,3 @@
         border-top: 1px solid lightgray;
     }
 
-f

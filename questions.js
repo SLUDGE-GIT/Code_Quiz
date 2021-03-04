@@ -1,6 +1,7 @@
 // object array that holds -question - choices - answer  --- I guess I just gotta pull basic coding questions from somewhere online?? how many q's?  5? 6? 10000000???
 
-// questions - answers taken from https://www.tutorialspoint.com/javascript/javascript_online_quiz.htm
+// questions / answers taken from https://www.tutorialspoint.com/javascript/javascript_online_quiz.htm dunno if this matters?
+
 let questions = [
     {
         prompt: 'Which built-in method removes the last element from an array and returns that element?',
@@ -46,9 +47,12 @@ let questions = [
 ];
 
 // need score counter
-
+let score = 0;
+//cycle through questions counter
+let questionCycle = 0;
 
 //need timer
+let timer 
 //timer countdown
 // 10 second penalizer for getting a wrong answer
 // allowed time per question???

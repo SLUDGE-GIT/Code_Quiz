@@ -1,6 +1,6 @@
 # Code_Quiz
 A simple multiple-choice game made using Javascript
-
+This was made created as an assignment for the WashU bootcamp (assignment 4)
 ------------------------------------------------------------------------------------------------------------------
 GITHUB
 https://github.com/SLUDGE-GIT/Code_Quiz

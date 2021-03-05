@@ -2,9 +2,10 @@
 A simple multiple-choice game made using Javascript
 
 ------------------------------------------------------------------------------------------------------------------
-# GITHUB
+GITHUB
 https://github.com/SLUDGE-GIT/Code_Quiz
-#GITHUB PAGES
+
+GITHUB PAGES
 https://sludge-git.github.io/Code_Quiz/
 ------------------------------------------------------------------------------------------------------------------
 

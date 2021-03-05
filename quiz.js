@@ -67,7 +67,7 @@ let container = document.querySelector('#container'); //Holds everything
 // 10 second penalizer for getting a wrong answer
 let penalty = 10;
 // allowed time per question???
-let remainingTime = 10;
+let remainingTime = 101;
 
 //placement holder
 let ph = 0;
@@ -128,12 +128,13 @@ function compare(event){
         newDiv.setAttribute('id', 'newDiv');
 
         // prompt when correct answer chosen
-        if(element.textContent == quizQuestions[quizIndex].answer) {
+        if (element.textContent == quizQuestions[quizIndex].answer) {
             score++;
             newDiv.textContent = 'Correct!';
         } 
         // prompt when wrong answer chosen
          else {
+             //subtracts 10 seconds from remaining time
             remainingTime = remainingTime - penalty;
             newDiv.textContent = 'Wrong Answer!';
         }
@@ -150,7 +151,7 @@ function compare(event){
      else {
         show(quizIndex);
     }
-    quizContainer.appendChild(newDiv);
+  throw quizContainer.appendChild(newDiv);
 
 }
 
@@ -200,25 +201,26 @@ quizContainer.appendChild(newInput);
 
 
 // handles submission
-let submit = document.createElement('button');
-submit.setAttribute('type', 'submit')
-submit.setAttribute('id', 'submit');
-submit.textContent = 'Submit';
+let submission = document.createElement('button');
+submission.setAttribute('type', 'submit');
+submission.setAttribute('id', 'submit');
+submission.setAttribute('value', 'sumbit');
+submission.textContent = 'Submit';
 
-quizContainer.appendChild(submit);
+quizContainer.appendChild(submission);
 
 
-submit.addEventListener('click',function () {
+submission.addEventListener('click',function () {
 let initials = newInput.value;
 
 if (initials === null){
 
-    alert('initials left NULL');
+    throw 'initials left NULL';
 
 } else {
     let final = {
         initials: initials,
-        score: playerScoreFromTime
+        score: remainingTime
     }
     let allHighScores = localStorage.getItem('allHighScores');
     if (allHighScores === null){
@@ -230,7 +232,7 @@ if (initials === null){
     allHighScores.push(final);
     let newHighScore = JSON.stringify(allHighScores);
     localStorage.setItem ('allHighScores', newHighScore);
-window.location.replace('.highscores.html');
+window.location.replace('./highscores.html');
 }
 
 });

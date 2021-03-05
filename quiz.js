@@ -66,10 +66,11 @@ let container = document.querySelector('#container'); //Holds everything
 
 // 10 second penalizer for getting a wrong answer
 let penalty = 10;
-// allowed time per question???
+
+// allowed time ???
 let remainingTime = 101;
 
-//placement holder
+//placement holder time
 let ph = 0;
 
 let newUl = document.createElement('ul');
@@ -121,10 +122,11 @@ quizContainer.textContent = userQ;
 
 function compare(event){
     let element = event.target;
-
+    let newDiv = document.createElement('div');
+    
     if (element.matches('li')){
 
-        let newDiv = document.createElement('div');
+        
         newDiv.setAttribute('id', 'newDiv');
 
         // prompt when correct answer chosen
@@ -151,7 +153,7 @@ function compare(event){
      else {
         show(quizIndex);
     }
-  throw quizContainer.appendChild(newDiv);
+        quizContainer.appendChild(newDiv);
 
 }
 
@@ -213,9 +215,9 @@ quizContainer.appendChild(submission);
 submission.addEventListener('click',function () {
 let initials = newInput.value;
 
-if (initials === null){
+if (initials == null){
 
-    throw 'initials left NULL';
+    alert('initials left NULL');
 
 } else {
     let final = {
